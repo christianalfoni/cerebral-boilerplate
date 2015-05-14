@@ -32,7 +32,7 @@
     "webpack": "^1.8.5"
   },
   "devDependencies": {
-    "cerebral": "^0.1.0",
+    "cerebral": "^0.2.0",
     "http-proxy": "^1.10.1",
     "react": "^0.13.3",
     "webpack-dev-server": "^1.8.0"
