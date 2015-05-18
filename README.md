@@ -1,6 +1,8 @@
 # cerebral-boilerplate
 
-A webpack boilerplate for cerebral applications
+A webpack boilerplate for cerebral applications.
+
+Take a look at [this video](https://www.youtube.com/watch?v=Mm4B5F432SQ) introducing the boilerplate.
 
 ## Prepare
 - `npm install`
