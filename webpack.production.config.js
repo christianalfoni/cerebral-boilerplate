@@ -16,7 +16,7 @@ var config = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel?optional=es7.decorators',
       exclude: [nodeModulesPath]
     }, {
       test: /\.css$/,
