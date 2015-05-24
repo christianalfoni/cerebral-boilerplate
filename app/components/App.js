@@ -1,10 +1,8 @@
 import React from 'react';
-import mixin from 'cerebral/src/mixin';
+import Cerebral from 'cerebral/decorator';
 
+@Cerebral(['inputValue', 'list'])
 class App extends React.Component {
-  getCerebralState() {
-    return ['inputValue', 'list'];
-  }
   onInputValueSubmit(event) {
     event.preventDefault();
     if (this.state.inputValue) {
@@ -32,4 +30,4 @@ class App extends React.Component {
   }
 }
 
-export default mixin(App);
+export default App;
