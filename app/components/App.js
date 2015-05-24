@@ -5,7 +5,7 @@ import Cerebral from 'cerebral/decorator';
 class App extends React.Component {
   onInputValueSubmit(event) {
     event.preventDefault();
-    if (this.state.inputValue) {
+    if (this.props.inputValue) {
       this.signals.inputValueSubmitted();
     }
   }
@@ -20,10 +20,10 @@ class App extends React.Component {
       <div>
         <h1>Hello world!</h1>
         <form onSubmit={this.onInputValueSubmit.bind(this)}>
-          <input type="text" value={this.state.inputValue} onChange={this.changeInputValue.bind(this)}/>
+          <input type="text" value={this.props.inputValue} onChange={this.changeInputValue.bind(this)}/>
         </form>
         <ul>
-          {this.state.list.map(this.renderListItem)}
+          {this.props.list.map(this.renderListItem)}
         </ul>
       </div>
     );
