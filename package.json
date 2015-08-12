@@ -28,7 +28,7 @@
     "babel-loader": "^5.0.0",
     "css-loader": "^0.10.1",
     "express": "^4.12.3",
-    "style-loader": "^0.10.2",
+    "style-loader": "^0.12.3",
     "webpack": "^1.8.5"
   },
   "devDependencies": {
