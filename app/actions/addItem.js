@@ -1,6 +1,6 @@
-let addItem = function (cerebral) {
-  cerebral.push('list', cerebral.get('inputValue'));
-  cerebral.set('inputValue', '');
+let addItem = function (input, state, output, services) {
+  state.push('list', state.get('inputValue'));
+  state.set('inputValue', '');
 };
 
 export default addItem;
