@@ -6,6 +6,9 @@ import {Decorator as Cerebral} from 'cerebral-react';
   list: ['list']
 })
 class App extends React.Component {
+  componentDidMount() {
+    this.props.signals.appMounted();
+  }
   onInputValueSubmit(event) {
     event.preventDefault();
     if (this.props.inputValue) {
