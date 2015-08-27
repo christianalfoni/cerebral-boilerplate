@@ -1,16 +1,22 @@
 import React from 'react';
-import Cerebral from 'cerebral/decorator';
+import {Decorator as Cerebral} from 'cerebral-react';
 
-@Cerebral(['inputValue', 'list'])
+@Cerebral({
+  inputValue: ['inputValue'],
+  list: ['list']
+})
 class App extends React.Component {
+  componentDidMount() {
+    this.props.signals.appMounted();
+  }
   onInputValueSubmit(event) {
     event.preventDefault();
     if (this.props.inputValue) {
-      this.signals.inputValueSubmitted();
+      this.props.signals.inputValueSubmitted();
     }
   }
   changeInputValue(event) {
-    this.signals.inputValueChanged(event.target.value);
+    this.props.signals.inputValueChanged(event.target.value);
   }
   renderListItem(item, index) {
     return <li key={index}>{item}</li>

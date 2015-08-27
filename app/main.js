@@ -1,14 +1,16 @@
 import './main.css';
+
 import React from 'react';
-import cerebral from './cerebral.js';
-import App from './components/App.js';
+import App from './App.js';
+import controller from './controller.js';
+import {Container} from 'cerebral-react';
 
-import setInputValue from './actions/setInputValue.js';
-import addItem from './actions/addItem.js';
+import appMounted from './signals/appMounted.js';
+import inputValueChanged from './signals/inputValueChanged.js';
+import inputValueSubmitted from './signals/inputValueSubmitted.js';
 
-cerebral.signal('inputValueChanged', setInputValue);
-cerebral.signal('inputValueSubmitted', addItem);
+controller.signal('appMounted', ...appMounted);
+controller.signal('inputValueChanged', ...inputValueChanged);
+controller.signal('inputValueSubmitted', ...inputValueSubmitted);
 
-let Wrapper = cerebral.injectInto(App);
-
-React.render(<Wrapper/>, document.querySelector('#app'));
+React.render(<Container controller={controller} app={App}/>, document.querySelector('#app'));

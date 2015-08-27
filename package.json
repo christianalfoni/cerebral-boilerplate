@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server",
     "build": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "build-win": "set NODE_ENV=production&&webpack -p --config webpack.production.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,10 +30,12 @@
     "css-loader": "^0.10.1",
     "express": "^4.12.3",
     "style-loader": "^0.12.3",
-    "webpack": "^1.8.5"
+    "webpack": "^1.8.5",
+    "cerebral-immutable-store": "^0.1.1",
+    "cerebral-react": "^0.1.1"
   },
   "devDependencies": {
-    "cerebral": "^0.8.0",
+    "cerebral": "^0.17.2",
     "http-proxy": "^1.10.1",
     "react": "^0.13.3",
     "webpack-dev-server": "^1.8.0"

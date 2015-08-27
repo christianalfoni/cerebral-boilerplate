@@ -1,5 +1,5 @@
-let setInputValue = function (cerebral, value) {
-  cerebral.set('inputValue', value);
+let setInputValue = function (input, state, output, services) {
+  state.set('inputValue', input);
 };
 
 export default setInputValue;
